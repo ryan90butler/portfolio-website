@@ -1,0 +1,193 @@
+.App {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topnav a {
+  float: center;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  position: sticky;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.About {
+  background: gray;
+  height: 480px;
+  display: flex;
+}
+
+.About-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.About-container img {
+ border: 1px black solid;
+}
+
+.About-container p {
+  margin-top: 30px;
+  width: 60%;
+}
+
+.Skills {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.intro-header {
+  font-size: 45px;
+}
+
+.Skills h3 {
+  font-size: 30px;
+  margin: 0px;
+  padding: 0;
+}
+
+.top-skills {
+  display: flex;
+  flex-direction: row;
+  margin-top: 45px;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.top-skills img {
+  height: 100px;
+}
+.middle-skills {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.middle-skills img {
+  height: 100px;
+}
+.bottom-skills {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.bottom-skills img  {
+  height: 100px;
+}
+p{
+  margin: 0;
+}
+.Portfolio {
+  height: 840px;
+  background: gray;
+}
+
+.Connect {
+  height: 300px;
+  background: gray;
+}
+
+.intro {
+  height: 275px;
+  background: url('./Assets/mountains.jpg');
+  background-position: center;
+}
+.intro h2 {
+  font-size: 50px;
+  opacity: 1;
+  color: black;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.intro h3 {
+  font-size: 24px;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.connect-buttons {
+  display:  flex;
+  margin-left:  auto;
+  margin-right:  auto;
+  flex-direction:  row;
+  justify-content: space-between;
+  width: 30%;
+  align-items:  center;
+  align-content:  center;
+}
+
+@media only screen and (max-width: 708px) {
+  .bottom-skills img {
+    height: 35px;
+  }
+  .middle-skills img {
+    height: 35px;
+  }
+  .top-skills img {
+    height: 35px;
+  }
+  .topnav a {
+    font-size: 17px;
+  }
+  .bottom-skills {
+    width: 95%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .middle-skills {
+    width: 95%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .top-skills {
+    width: 95%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .About-container {
+    flex-direction: column;
+    margin-top: 5px;
+  }
+  .About-container img {
+    height: 150px;
+    width: 150px;
+  }
+}
