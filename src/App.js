@@ -17,6 +17,7 @@ import githubsmall from './Assets/github1.png';
 import linkedin from './Assets/linkedin.png';
 import codeBar from './Assets/projects/codebar.png';
 import myPark from './Assets/projects/myPark.png';
+import email from './Assets/email.png'
 
 class App extends Component {
   render() {
@@ -97,6 +98,7 @@ class App extends Component {
       <h3>Connect</h3>
       <div className='connect-buttons'>
       <a href='https://www.linkedin.com/in/rlbutler1/' target="_blank"><img alt='linkedin' height='75'src={linkedin}/></a>
+      <a href='mailto:ryan90butler@gmail.com'><img alt='email' height='65' src={email}/></a>
       <a href='https://github.com/ryan90butler' target="_blank"><img alt='github' height='65' src={githubsmall}/></a>
       </div>
       </div>
