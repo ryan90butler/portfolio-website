@@ -33,7 +33,7 @@
 }
 
 .About {
-  background: gray;
+  background: darkgray;
   height: 480px;
   display: flex;
 }
@@ -49,11 +49,13 @@
 }
 .About-container img {
  border: 1px black solid;
+ border-radius: 4px;
 }
 
 .About-container p {
   margin-top: 30px;
   width: 60%;
+  font-size: 22px;
 }
 
 .Skills {
@@ -70,7 +72,7 @@
 }
 
 .Skills h3 {
-  font-size: 30px;
+  font-size: 45px;
   margin: 0px;
   padding: 0;
 }
@@ -80,7 +82,7 @@
   flex-direction: row;
   margin-top: 45px;
   justify-content: space-between;
-  width: 100%;
+  width: 95%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -91,7 +93,7 @@
   display: flex;
   margin-top: 30px;
   justify-content: space-between;
-  width: 100%;
+  width: 95%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -102,7 +104,7 @@
   display: flex;
   margin-top: 30px;
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -113,13 +115,15 @@ p{
   margin: 0;
 }
 .Portfolio {
-  height: 840px;
-  background: gray;
+  height: auto;
+  background: darkgray;
 }
 
 .Connect {
-  height: 300px;
-  background: gray;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: darkgray;
 }
 
 .intro {
@@ -144,11 +148,108 @@ p{
   display:  flex;
   margin-left:  auto;
   margin-right:  auto;
-  flex-direction:  row;
   justify-content: space-between;
-  width: 30%;
   align-items:  center;
   align-content:  center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  width: 35%;
+}
+
+.myPark {
+  display: flex;
+  width: 70%;
+  margin-bottom: 15px;
+  background: white;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px black solid;
+  border-radius: 4px;
+}
+
+.myPark img {
+  width: 100%;
+  height: auto;
+  border: 1px black solid;
+}
+
+.codeBar {
+  width: 70%;
+  display: flex;
+  background: white;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px black solid;
+  border-radius: 4px;
+}
+
+.codeBar img {
+  width: 100%;
+  height: auto;
+  border: 1px black solid;
+}
+
+.project-buttons {
+  display:  flex;
+  width: 40%;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.portfolio-container p {
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 95%;
+}
+
+.portfolio-container span {
+  margin-top: 5px;
+}
+
+.portfolio-container a {
+  text-decoration: none;
+  width: 100%;
+}
+
+.Portfolio h3 {
+  font-size: 45px;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.Connect h3 {
+  font-size: 35px;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 608px) {
+  .codeBar {
+    width: 90%;
+  }
+  .myPark {
+    width: 90%;
+  }
+  .About-container p {
+    font-size: 16px;
+  }
+  .connect-buttons {
+    width: 75%;
+  }
 }
 
 @media only screen and (max-width: 708px) {
@@ -165,7 +266,7 @@ p{
     font-size: 17px;
   }
   .bottom-skills {
-    width: 95%;
+    width: 85%;
     height: auto;
     margin-right: auto;
     margin-left: auto;

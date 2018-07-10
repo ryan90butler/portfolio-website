@@ -15,6 +15,8 @@ import postgres from './Assets/postgres.png';
 import me from './Assets/me.jpeg';
 import githubsmall from './Assets/github1.png';
 import linkedin from './Assets/linkedin.png';
+import codeBar from './Assets/projects/codebar.png';
+import myPark from './Assets/projects/myPark.png';
 
 class App extends Component {
   render() {
@@ -36,7 +38,7 @@ class App extends Component {
       <br/>
       <div className='About-container'>
       <p>I love programming, solving problems, and building. I'm a self-motived software developer with a strong work ethic, and attention to detail. I'm adept in learning new concepts, ideas, and frameworks with a desire to work in a fast-paced company to build amazing applications.</p>
-      <img height='250' width='250' src={me}/>
+      <img height='250' width='250' alt='portfolio' src={me}/>
       </div>
       </div>
       </a>
@@ -46,36 +48,56 @@ class App extends Component {
       <br/>
       <h3>Skills</h3>
       <div className="top-skills">
-      <img title="Javascript"alt="js" src={js}/>
-      <img alt="js" src={react}/>
-      <img alt="js" src={css}/>
-      <img alt="js" src={html}/>
-      <img alt="js" src={node}/>
+        <img title="Javascript"alt="js" src={js}/>
+        <img alt="js" src={react}/>
+        <img alt="js" src={css}/>
+        <img alt="js" src={html}/>
+        <img alt="js" src={node}/>
       </div>
       <div className="middle-skills">
-      <img alt="js" src={express}/>
-      <img alt="js" src={github}/>
-      <img alt="js" src={heroku}/>
-      <img alt="js" src={postgres}/>
+        <img alt="js" src={express}/>
+        <img alt="js" src={github}/>
+        <img alt="js" src={heroku}/>
+        <img alt="js" src={postgres}/>
       </div>
       <div className="bottom-skills">
-      <img alt="js" src={mongo}/>
-      <img alt="js" src={mocha}/>
-      <img alt="js" src={sass}/>
+        <img alt="js" src={mongo}/>
+        <img alt="js" src={mocha}/>
+        <img alt="js" src={sass}/>
       </div>
       </div>
       </a>
       <a name="portfolio">
-      <div className ='Portfolio'>
-      Portfolio
+      <div className='Portfolio'>
+      <br/>
+      <br/>
+      <h3>Portfolio</h3>
+      <div className='portfolio-container'>
+      <div className='myPark'>
+      <a href='https://mypark-db.herokuapp.com/' target="_blank"><img height='350' src={myPark}/></a>
+        <span> React, Redux, PostgreSQL, Sass, Express, 3rd Party APIs
+          </span>
+          <p> MyPark is a one-stop-shop for members to find information (pictures,campgrounds, distance, visitor reviews) for national parks and monuments in the USA. Users can also save parks to their dashboard for future reference.
+          </p>
+      </div>
+      <div className='codeBar'>
+      <a href='http://www.devcodebar.com' target="_blank"><img height='350' src={codeBar}/></a>
+        <span> React, Redux, MongoDB, Mocha, Chai, Sass
+          </span>
+          <p> CodeBar was designed as a hassle-free way for administering assessments in order to gauge competencies in Javascript.
+          </p>
+      </div>
+      </div>
       </div>
       </a>
       <a name="connect">
       <div className='Connect'>
-      Connect
+      <br/>
+      <br/>
+      <h3>Connect</h3>
       <div className='connect-buttons'>
-      <a href='www.linkedin.com/in/rlbutler1/' target="_blank" ><img height='100'src={linkedin}/></a>
-      <a href='https://github.com/ryan90butler'target="_blank"><img height='100' src={githubsmall}/></a>
+      <a href='https://www.linkedin.com/in/rlbutler1/' target="_blank"><img alt='linkedin' height='75'src={linkedin}/></a>
+      <a href='https://github.com/ryan90butler' target="_blank"><img alt='github' height='65' src={githubsmall}/></a>
       </div>
       </div>
       </a>
