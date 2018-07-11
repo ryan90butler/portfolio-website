@@ -38,7 +38,7 @@ class App extends Component {
       <br/>
       <br/>
       <div className='About-container'>
-      <p>I love programming, solving problems, and building. I'm a self-motived software developer with a strong work ethic, and attention to detail. I'm adept in learning new concepts, ideas, and frameworks with a desire to work in a fast-paced company to build amazing applications.</p>
+      <p>I love programming, solving problems, and building. I'm a self-motivated software developer with a strong work ethic, and attention to detail. I'm adept in learning new concepts, ideas, and frameworks with a desire to work in a fast-paced company to build amazing applications.</p>
       <img height='250' width='250' alt='portfolio' src={me}/>
       </div>
       </div>
