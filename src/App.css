@@ -36,6 +36,7 @@
   background: darkgray;
   height: 480px;
   display: flex;
+  border-bottom: black solid 1px;
 }
 
 .About-container {
@@ -71,52 +72,37 @@
   font-size: 45px;
 }
 
+.Skills h4 {
+  font-size: 20px;
+}
+
 .Skills h3 {
   font-size: 45px;
-  margin: 0px;
   padding: 0;
+  margin: 0;
 }
 
 .top-skills {
   display: flex;
   flex-direction: row;
-  margin-top: 45px;
-  justify-content: space-between;
-  width: 95%;
-  margin-right: auto;
-  margin-left: auto;
-}
-.top-skills img {
-  height: 100px;
-}
-.middle-skills {
-  display: flex;
-  margin-top: 30px;
-  justify-content: space-between;
-  width: 95%;
-  margin-right: auto;
-  margin-left: auto;
-}
-.middle-skills img {
-  height: 100px;
-}
-.bottom-skills {
-  display: flex;
-  margin-top: 30px;
-  justify-content: space-between;
+  margin-top: 25px;
+  justify-content: space-evenly;
   width: 80%;
   margin-right: auto;
   margin-left: auto;
 }
-.bottom-skills img  {
-  height: 100px;
+.top-skills img {
+  width: 100px;
+  height: auto;
 }
+
 p{
   margin: 0;
 }
 .Portfolio {
   height: auto;
   background: darkgray;
+  border-top: 1px black solid;
 }
 
 .Connect {
@@ -218,11 +204,6 @@ p{
   margin-top: 5px;
 }
 
-.portfolio-container a {
-  text-decoration: none;
-  width: 100%;
-}
-
 .Portfolio h3 {
   font-size: 45px;
   padding: 0;
@@ -235,6 +216,13 @@ p{
   padding: 0;
   margin: 0;
   margin-top: 10px;
+}
+
+button {
+  cursor: pointer;
+  width: 50px;
+  height: 20px;
+  margin-bottom: 5px;
 }
 
 @media only screen and (max-width: 608px) {
@@ -253,31 +241,22 @@ p{
 }
 
 @media only screen and (max-width: 708px) {
-  .bottom-skills img {
-    height: 35px;
-  }
-  .middle-skills img {
-    height: 35px;
-  }
   .top-skills img {
-    height: 35px;
+    width: 100px;
+    margin: 0;
+    height: auto;
   }
+  section {
+    border-top: 1px black solid;
+    margin-bottom: 15px;
+    width: 100%;
+}
   .topnav a {
     font-size: 17px;
   }
-  .bottom-skills {
-    width: 85%;
-    height: auto;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .middle-skills {
-    width: 95%;
-    height: auto;
-    margin-right: auto;
-    margin-left: auto;
-  }
   .top-skills {
+    display: flex;
+    flex-direction: column;
     width: 95%;
     height: auto;
     margin-right: auto;

@@ -2,22 +2,22 @@ import React, { Component } from 'react';
 import './App.css';
 import react from './Assets/react.svg';
 import js from './Assets/JS.png';
-import css from './Assets/CSS.png';
+import css from './Assets/css.svg';
 import express from './Assets/express.png';
-import github from './Assets/github.png';
-import heroku from './Assets/heroku.png';
-import html from './Assets/html.png';
-import mongo from './Assets/mongo.jpg';
+import html from './Assets/html.svg';
+import api from './Assets/api.svg';
+import git from './Assets/github.svg'
 import mocha from './Assets/mocha.png';
 import node from './Assets/node.png';
 import sass from './Assets/sass.png';
-import postgres from './Assets/postgres.png';
+import postgres from './Assets/postgres.svg';
 import me from './Assets/me.jpeg';
 import githubsmall from './Assets/github1.png';
 import linkedin from './Assets/linkedin.png';
 import codeBar from './Assets/projects/codebar.png';
 import myPark from './Assets/projects/myPark.png';
-import email from './Assets/email.png'
+import email from './Assets/email.png';
+import redux from './Assets/redux.svg';
 
 class App extends Component {
   render() {
@@ -49,22 +49,61 @@ class App extends Component {
       <br/>
       <h3>Skills</h3>
       <div className="top-skills">
+      <section>
+        <h4>JavaScript</h4>
         <img title="Javascript"alt="js" src={js}/>
-        <img alt="js" src={react}/>
-        <img alt="js" src={css}/>
-        <img alt="js" src={html}/>
-        <img alt="js" src={node}/>
+        </section>
+      <section>
+        <h4>React</h4>
+        <img title="Javascript"alt="js" src={react}/>
+        </section>
+        <section>
+        <h4>Redux</h4>
+        <img title="Javascript"alt="js" src={redux}/>
+        </section>
       </div>
-      <div className="middle-skills">
-        <img alt="js" src={express}/>
-        <img alt="js" src={github}/>
-        <img alt="js" src={heroku}/>
-        <img alt="js" src={postgres}/>
+      <div className="top-skills">
+        <section>
+        <h4>Node.js</h4>
+        <img title="Javascript"alt="js" src={node}/>
+        </section>
+        <section>
+        <h4>Git</h4>
+        <img title="Javascript"alt="js" src={git}/>
+        </section>
+
+        <section>
+        <h4>Express</h4>
+        <img title="Javascript"alt="js" src={express}/>
+        </section>
       </div>
-      <div className="bottom-skills">
-        <img alt="js" src={mongo}/>
-        <img alt="js" src={mocha}/>
-        <img alt="js" src={sass}/>
+      <div className="top-skills">
+      <section>
+        <h4>PostgreSQL</h4>
+        <img title="Javascript"alt="js" src={postgres}/>
+        </section>
+        <section>
+        <h4>RESTful API</h4>
+        <img title="Javascript"alt="js" src={api}/>
+        </section>
+        <section>
+        <h4>Mocha</h4>
+        <img title="Javascript"alt="js" src={mocha}/>
+        </section>
+      </div>
+      <div className="top-skills">
+        <section>
+        <h4>Sass</h4>
+        <img title="Javascript"alt="js" src={sass}/>
+        </section>
+        <section>
+        <h4>CSS</h4>
+        <img title="Javascript"alt="js" src={css}/>
+        </section>
+        <section>
+        <h4>HTML</h4>
+        <img title="Javascript"alt="js" src={html}/>
+        </section>
       </div>
       </div>
       </a>
@@ -75,18 +114,20 @@ class App extends Component {
       <h3>Portfolio</h3>
       <div className='portfolio-container'>
       <div className='myPark'>
-      <a href='https://mypark-db.herokuapp.com/' target="_blank"><img height='350' src={myPark}/></a>
+      <img height='350' src={myPark}/>
         <span> React, Redux, PostgreSQL, Sass, Express, 3rd Party APIs
           </span>
           <p> MyPark is a one-stop-shop for members to find information (pictures,campgrounds, distance, visitor reviews) for national parks and monuments in the USA. Users can also save parks to their dashboard for future reference.
           </p>
+          <a href='https://mypark-db.herokuapp.com/' target="_blank"><button>Visit</button></a>
       </div>
       <div className='codeBar'>
-      <a href='http://www.devcodebar.com' target="_blank"><img height='350' src={codeBar}/></a>
+      <img height='350' src={codeBar}/>
         <span> React, Redux, MongoDB, Mocha, Chai, Sass
           </span>
           <p> CodeBar was designed as a hassle-free way for administering assessments in order to gauge competencies in Javascript.
           </p>
+          <a href='http://www.devcodebar.com' target="_blank"><button>Visit</button></a>
       </div>
       </div>
       </div>
