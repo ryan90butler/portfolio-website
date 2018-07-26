@@ -23,23 +23,24 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-      <div className='intro'>
-        <h2 className='intro-header'>Ryan Butler</h2>
-        <h3>Software Developer</h3>
-        </div>
-      <div className='topnav'>
+        <div className='topnav'>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#connect">Connect</a>
       </div>
+      <div className='intro'>
+        <h2 className='intro-header'>Ryan Butler</h2>
+        <h3>Software Developer</h3>
+        </div>
       <a name="about">
       <div className='About'>
       <br/>
       <br/>
+      <h3>About</h3>
       <div className='About-container'>
+      <img height='300' width='300' alt='portfolio' src={me}/>
       <p>I love programming, solving problems, and building. I'm a self-motivated software developer with a strong work ethic, and attention to detail. I'm adept in learning new concepts, ideas, and frameworks with a desire to work in a fast-paced company to build amazing applications.</p>
-      <img height='250' width='250' alt='portfolio' src={me}/>
       </div>
       </div>
       </a>
@@ -115,19 +116,19 @@ class App extends Component {
       <div className='portfolio-container'>
       <div className='myPark'>
       <img height='350' src={myPark}/>
-        <span> React, Redux, PostgreSQL, Sass, Express, 3rd Party APIs
-          </span>
-          <p> MyPark is a one-stop-shop for members to find information (pictures,campgrounds, distance, visitor reviews) for national parks and monuments in the USA. Users can also save parks to their dashboard for future reference.
+        <span>React, Redux, SASS, Node.js, Express, REST, PostgreSQL</span>
+          <p> MyPark helps vacation goers find and collect information for their favorite national parks. MyPark collects park information with the National Park Service API, coupled with the Google distance API to present the data. Users can save their desired parks for future use, leave comments on any park, and find campground information.
           </p>
-          <a href='https://mypark-db.herokuapp.com/' target="_blank"><button>Visit</button></a>
+          <a href='https://mypark-db.herokuapp.com/' target="_blank"><button>Visit MyPark</button></a>
+          <a href='https://github.com/ryan90butler/mypark' target="_blank"><button>GitHub Repo</button></a>
       </div>
       <div className='codeBar'>
       <img height='350' src={codeBar}/>
-        <span> React, Redux, MongoDB, Mocha, Chai, Sass
-          </span>
-          <p> CodeBar was designed as a hassle-free way for administering assessments in order to gauge competencies in Javascript.
+        <span>React, Redux, Sass, Node.js, Express, REST, MongoDB</span>
+          <p> Code Bar is an assessment administration tool for educators, mentors, potential employers, and anyone else looking to test JavaScript competencies. Code Bar was created as a seamless option to distribute assessments to students without managing a student portal or tracker. Instructors can send students a link to an assessment and students can use it to take their assessment, while receiving a detailed report of the students code and logic.
           </p>
-          <a href='http://www.devcodebar.com' target="_blank"><button>Visit</button></a>
+          <a href='http://www.devcodebar.com' target="_blank"><button>Visit Code Bar</button></a>
+          <a href='https://github.com/DEMPA15/assessment-proj' target="_blank"><button>GitHub Repo</button></a>
       </div>
       </div>
       </div>
