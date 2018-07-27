@@ -2,34 +2,40 @@ const express = require('express');
 const app = express();
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const cors = require('cors');
+require('dotenv').config();
 
 app.use(express.static('/build'));
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.use(cors());
 
-app.post('/contact', function (req, res) {
-  let mailOpts, smtpTrans;
-  smtpTrans = nodemailer.createTransport({
+app.post(`/api/contact`, (req, res) =>{
+  let transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
+    port: 587,
+    secure: false,
     auth: {
-      user: 'b6utle5r@gmail.com',
-      pass: process.env.GMAIL_PASS
+        user: 'ryan90butler@gmail.com',
+        pass: process.env.GMAIL_PASS
+    },
+    tls:{
+    rejectUnauthorized: false
     }
-  });
-  mailOpts = {
+});
+
+  let mailOptions = {
     from: req.body.name + ' &lt;' + req.body.email + '&gt;',
     to: 'b6utle5r@gmail.com',
     subject: 'New message from contact form at ryanlbutler.com',
     text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
-  };
-  smtpTrans.sendMail(mailOpts, function (error, response) {
+};
+
+  transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      res.render('contact-failure');
+        return console.log(error);
     }
-    else {
-      res.render('contact-success');
-    }
+    console.log('Message sent: %s', info.messageId);
+    res.send({'message sent':true})
   });
 });
 

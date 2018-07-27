@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './MyPark.css';
 import { Carousel } from 'react-responsive-carousel';
 import myPark from '../../Assets/projects/myPark.png';
 import myPark1 from '../../Assets/projects/myPark1.png';
@@ -12,15 +11,15 @@ class MyPark extends Component {
       <Carousel showArrows={true} autoPlay={false} interval='5000' infiniteLoop={true}>
       <div>
           <img src={myPark} />
-          <p className="legend">Code Bar landing page, no login required for assessments</p>
+          <p className="legend">MyPark login view</p>
       </div>
       <div>
           <img src={myPark1} />
-          <p className="legend">CSs</p>
+          <p className="legend">MyPark dashboard view</p>
       </div>
       <div>
           <img src={myPark2} />
-          <p className="legend">CSs</p>
+          <p className="legend">MyPark detail view</p>
       </div>
   </Carousel>
     );

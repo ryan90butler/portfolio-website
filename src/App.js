@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
 import react from './Assets/react.svg';
 import js from './Assets/JS.png';
 import css from './Assets/css.svg';
@@ -14,14 +15,42 @@ import postgres from './Assets/postgres.svg';
 import me from './Assets/me.jpeg';
 import githubsmall from './Assets/github1.png';
 import linkedin from './Assets/linkedin.png';
-import myPark from './Assets/projects/myPark.png';
 import email from './Assets/email.png';
 import redux from './Assets/redux.svg';
 import CodeBar from './Components/CodeBar/CodeBar.js';
 import MyPark from './Components/MyPark/MyPark.js';
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state={
+      name: '',
+      email: '',
+      message: ''
+    }
+    this.submitEmail = this.submitEmail.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  submitEmail(){
+    let {name, email, message} = this.state;
+    axios.post('/api/contact', {name, email, message}).then(response => {
+        console.log(response)
+        this.setState({name: '', email: '', message:''})
+    })
+}
+
+  handleChange(e){
+    this.setState({
+        [e.target.name]: e.target.value,
+    });
+  }
+
   render() {
+    const isEnabled =
+    this.state.email.length > 0 &&
+    this.state.message.length > 0 &&
+    this.state.name.length > 0
     return (
       <div className='App'>
         <div className='topnav'>
@@ -41,7 +70,7 @@ class App extends Component {
       <h3>About</h3>
       <div className='About-container'>
       <img height='300' width='300' alt='portfolio' src={me}/>
-      <p>I love programming, solving problems, and building. I'm a self-motivated software developer with a strong work ethic, and attention to detail. I'm adept in learning new concepts, ideas, and frameworks with a desire to work in a fast-paced company to build amazing applications.</p>
+      <p>I love programming, solving problems, and building. I'm a self-motivated software developer with a strong work ethic, and attention to detail. I'm adept in learning new concepts, ideas, and frameworks with a strong desire to build amazing applications.</p>
       </div>
       </div>
       </a>
@@ -124,11 +153,11 @@ class App extends Component {
       </div>
       <div className='codeBar'>
       <CodeBar/>
-        <span>React, Redux, Sass, Node.js, Express, REST, MongoDB</span>
-          <p> Code Bar is an assessment administration tool for educators, mentors, potential employers, and anyone else looking to test JavaScript competencies. Code Bar was created as a seamless option to distribute assessments to students without managing a student portal or tracker. Instructors can send students a link to an assessment and students can use it to take their assessment, while receiving a detailed report of the students code and logic.
-          </p>
-          <a href='http://www.devcodebar.com' target="_blank"><button>Visit Code Bar</button></a>
-          <a href='https://github.com/DEMPA15/assessment-proj' target="_blank"><button>GitHub Repo</button></a>
+      <span>React, Redux, Sass, Node.js, Express, REST, MongoDB</span>
+        <p> Code Bar is an assessment administration tool for educators, mentors, potential employers, and anyone else looking to test JavaScript competencies. Code Bar was created as a seamless option to distribute assessments to students without managing a student portal or tracker. Instructors can send students a link to an assessment and students can use it to take their assessment, while receiving a detailed report of the students code and logic.
+        </p>
+        <a href='http://www.devcodebar.com' target="_blank"><button>Visit Code Bar</button></a>
+        <a href='https://github.com/DEMPA15/assessment-proj' target="_blank"><button>GitHub Repo</button></a>
       </div>
       </div>
       </div>
@@ -138,6 +167,15 @@ class App extends Component {
       <br/>
       <br/>
       <h3>Connect</h3>
+      <form className="contactForm">
+      <label for="name">Name &#42;</label>
+      <input name="name" value={this.state.name} onChange={this.handleChange}/>
+      <label for="email">Email &#42;</label>
+      <input name="email" value={this.state.email} onChange={this.handleChange}/>
+      <label for="message">Message &#42;</label>
+      <textarea cols="30" rows="10" name="message" value={this.state.message} onChange={this.handleChange}/>
+      <button disabled={!isEnabled} onClick={()=>this.submitEmail()}type="submit">Submit</button>
+      </form>
       <div className='connect-buttons'>
       <a href='https://www.linkedin.com/in/rlbutler1/' target="_blank"><img alt='linkedin' height='75'src={linkedin}/></a>
       <a href='mailto:ryan90butler@gmail.com'><img alt='email' height='65' src={email}/></a>
