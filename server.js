@@ -3,9 +3,10 @@ const app = express();
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 require('dotenv').config();
 
-app.use(express.static('/build'));
+app.use(express.static(path.join(__dirname, '/build')));
 app.use(bodyParser.json());
 app.use(cors());
 
