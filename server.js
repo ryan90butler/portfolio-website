@@ -1,12 +1,12 @@
+require('dotenv').config();
 const express = require('express');
-const app = express();
-const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
 // const cors = require('cors');
 // const path = require('path');
-require('dotenv').config();
 
 // app.use(express.static(path.join(__dirname, '/build')));
+const app = express();
 app.use(bodyParser.json());
 // app.use(cors());
 
