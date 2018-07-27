@@ -2,13 +2,13 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-// const cors = require('cors');
+const cors = require('cors');
 const path = require('path');
 
 app.use(express.static(path.join(__dirname, './build')));
 const app = express();
 app.use(bodyParser.json());
-// app.use(cors());
+app.use(cors());
 
 app.post(`/api/contact`, (req, res) =>{
   let transporter = nodemailer.createTransport({
