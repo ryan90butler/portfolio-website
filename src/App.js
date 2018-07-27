@@ -39,6 +39,9 @@ class App extends Component {
         console.log(response)
         this.setState({name: '', email: '', message:''})
     })
+    .catch(error=>{
+      console.warn(error)
+    })
 }
 
   handleChange(e){
