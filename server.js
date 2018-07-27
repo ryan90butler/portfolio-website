@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 const path = require('path');
 
-app.use(express.static(path.join(__dirname, './build')));
+app.use(express.static(path.join(__dirname, '/build')));
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
