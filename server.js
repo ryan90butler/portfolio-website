@@ -6,7 +6,9 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-app.use(express.static(path.join(__dirname, '/build')));
+app.use(express.static('static'
+  // path.join(__dirname, '/build')
+));
 app.use(bodyParser.json());
 app.use(cors());
 
