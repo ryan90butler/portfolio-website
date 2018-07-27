@@ -14,10 +14,11 @@ import postgres from './Assets/postgres.svg';
 import me from './Assets/me.jpeg';
 import githubsmall from './Assets/github1.png';
 import linkedin from './Assets/linkedin.png';
-import codeBar from './Assets/projects/codebar.png';
 import myPark from './Assets/projects/myPark.png';
 import email from './Assets/email.png';
 import redux from './Assets/redux.svg';
+import CodeBar from './Components/CodeBar/CodeBar.js';
+import MyPark from './Components/MyPark/MyPark.js';
 
 class App extends Component {
   render() {
@@ -72,7 +73,6 @@ class App extends Component {
         <h4>Git</h4>
         <img title="Javascript"alt="js" src={git}/>
         </section>
-
         <section>
         <h4>Express</h4>
         <img title="Javascript"alt="js" src={express}/>
@@ -115,7 +115,7 @@ class App extends Component {
       <h3>Portfolio</h3>
       <div className='portfolio-container'>
       <div className='myPark'>
-      <img height='350' src={myPark}/>
+      <MyPark/>
         <span>React, Redux, SASS, Node.js, Express, REST, PostgreSQL</span>
           <p> MyPark helps vacation goers find and collect information for their favorite national parks. MyPark collects park information with the National Park Service API, coupled with the Google distance API to present the data. Users can save their desired parks for future use, leave comments on any park, and find campground information.
           </p>
@@ -123,7 +123,7 @@ class App extends Component {
           <a href='https://github.com/ryan90butler/mypark' target="_blank"><button>GitHub Repo</button></a>
       </div>
       <div className='codeBar'>
-      <img height='350' src={codeBar}/>
+      <CodeBar/>
         <span>React, Redux, Sass, Node.js, Express, REST, MongoDB</span>
           <p> Code Bar is an assessment administration tool for educators, mentors, potential employers, and anyone else looking to test JavaScript competencies. Code Bar was created as a seamless option to distribute assessments to students without managing a student portal or tracker. Instructors can send students a link to an assessment and students can use it to take their assessment, while receiving a detailed report of the students code and logic.
           </p>
