@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
-require('dotenv').config({ path: __dirname + "/.env" });
+require('dotenv').config();
 
 app.use(express.static(path.join(__dirname, '/build')));
 app.use(bodyParser.json());
@@ -40,11 +40,11 @@ app.post(`/api/contact`, (req, res) =>{
   });
 });
 
-app.get('/*', (req, res) => {
-  res.sendFile('index.html', {
-      root: path.join(__dirname, "/build")
-    })
-})
+// app.get('/*', (req, res) => {
+//   res.sendFile('index.html', {
+//       root: path.join(__dirname, "/build")
+//     })
+// })
 
 const port = process.env.PORT || 8080
 app.listen( port , () => {
