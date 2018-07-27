@@ -25,7 +25,7 @@ app.post(`/api/contact`, (req, res) =>{
 
   let mailOptions = {
     from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-    to: 'b6utle5r@gmail.com',
+    to: 'ryan90butler@gmail.com',
     subject: 'New message from contact form at ryanlbutler.com',
     text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
 };

@@ -32,9 +32,10 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  submitEmail(){
-    let {name, email, message} = this.state;
-    axios.post('/api/contact', {name, email, message}).then(response => {
+  submitEmail(e) {
+    e.preventDefault();
+    axios.post('/api/contact', {name:this.state.name, email: this.state.email, message:this.state.email})
+      .then(response => {
         console.log(response)
         this.setState({name: '', email: '', message:''})
     })
@@ -63,8 +64,8 @@ class App extends Component {
         <h2 className='intro-header'>Ryan Butler</h2>
         <h3>Software Developer</h3>
         </div>
-      <a name="about">
       <div className='About'>
+      <a name="about">
       <br/>
       <br/>
       <h3>About</h3>
@@ -72,10 +73,10 @@ class App extends Component {
       <img height='300' width='300' alt='portfolio' src={me}/>
       <p>I love programming, solving problems, and building. I'm a self-motivated software developer with a strong work ethic, and attention to detail. I'm adept in learning new concepts, ideas, and frameworks with a strong desire to build amazing applications.</p>
       </div>
-      </div>
       </a>
-      <a name="skills">
+      </div>
       <div className='Skills'>
+      <a name="skills">
       <br/>
       <br/>
       <h3>Skills</h3>
@@ -135,8 +136,8 @@ class App extends Component {
         <img title="Javascript"alt="js" src={html}/>
         </section>
       </div>
-      </div>
       </a>
+      </div>
       <a name="portfolio">
       <div className='Portfolio'>
       <br/>
@@ -162,8 +163,8 @@ class App extends Component {
       </div>
       </div>
       </a>
-      <a name="connect">
       <div className='Connect'>
+      <a name="connect">
       <br/>
       <br/>
       <h3>Connect</h3>
@@ -174,15 +175,15 @@ class App extends Component {
       <input name="email" value={this.state.email} onChange={this.handleChange}/>
       <label for="message">Message &#42;</label>
       <textarea cols="30" rows="10" name="message" value={this.state.message} onChange={this.handleChange}/>
-      <button disabled={!isEnabled} onClick={()=>this.submitEmail()}type="submit">Submit</button>
+      <button disabled={!isEnabled} onClick={this.submitEmail}>Submit</button>
       </form>
       <div className='connect-buttons'>
       <a href='https://www.linkedin.com/in/rlbutler1/' target="_blank"><img alt='linkedin' height='75'src={linkedin}/></a>
       <a href='mailto:ryan90butler@gmail.com'><img alt='email' height='65' src={email}/></a>
       <a href='https://github.com/ryan90butler' target="_blank"><img alt='github' height='65' src={githubsmall}/></a>
       </div>
-      </div>
       </a>
+      </div>
       </div>
     );
   }
