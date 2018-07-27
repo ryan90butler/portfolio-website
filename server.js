@@ -40,8 +40,13 @@ app.post(`/api/contact`, (req, res) =>{
   });
 });
 
-const port = process.env.PORT || 8080
+app.get('/*', (req, res) => {
+  res.sendFile('index.html', {
+      root: path.join(__dirname, "build")
+    })
+})
 
+const port = process.env.PORT || 8080
 app.listen( port , () => {
   console.log(`Server listening on port ${port}`);
 });
