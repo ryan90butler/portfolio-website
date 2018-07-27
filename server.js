@@ -2,13 +2,13 @@ const express = require('express');
 const app = express();
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
-const cors = require('cors');
-const path = require('path');
+// const cors = require('cors');
+// const path = require('path');
 require('dotenv').config();
 
 // app.use(express.static(path.join(__dirname, '/build')));
 app.use(bodyParser.json());
-app.use(cors());
+// app.use(cors());
 
 app.post(`/api/contact`, (req, res) =>{
   let transporter = nodemailer.createTransport({
@@ -40,11 +40,11 @@ app.post(`/api/contact`, (req, res) =>{
   });
 });
 
-app.get('/*', (req, res) => {
-  res.sendFile('index.html', {
-      root: path.join(__dirname, "/build")
-    })
-})
+// app.get('/*', (req, res) => {
+//   res.sendFile('index.html', {
+//       root: path.join(__dirname, "/build")
+//     })
+// })
 
 const port = process.env.PORT || 8080
 app.listen( port , () => {
