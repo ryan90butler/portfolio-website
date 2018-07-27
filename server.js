@@ -6,9 +6,7 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-app.use(express.static('static'
-  // path.join(__dirname, '/build')
-));
+
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -42,11 +40,13 @@ app.post(`/api/contact`, (req, res) =>{
   });
 });
 
+app.use(express.static(path.join(__dirname, '/build')));
+
 app.get('/*', (req, res) => {
-  res.sendFile('index.html', {
-      root: path.join(__dirname, "build")
-    })
-})
+    res.sendFile('index.html', {
+        root: path.join(__dirname, "build")
+      })
+  })
 
 const port = process.env.PORT || 8080
 app.listen( port , () => {
