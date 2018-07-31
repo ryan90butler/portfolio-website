@@ -99,6 +99,11 @@
   height: auto;
 }
 
+#express {
+  height: 30px;
+  width: 120px;
+}
+
 .Portfolio {
   height: auto;
   background: darkgray;

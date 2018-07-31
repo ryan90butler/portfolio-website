@@ -103,12 +103,12 @@ class App extends Component {
         <img title="Javascript"alt="js" src={node}/>
         </section>
         <section>
-        <h4>Git</h4>
-        <img title="Javascript"alt="js" src={git}/>
+        <h4>HTML</h4>
+        <img title="Javascript"alt="js" src={html}/>
         </section>
         <section>
-        <h4>Express</h4>
-        <img title="Javascript"alt="js" src={express}/>
+        <h4>CSS</h4>
+        <img title="Javascript"alt="js" src={css}/>
         </section>
       </div>
       <div className="top-skills">
@@ -121,22 +121,22 @@ class App extends Component {
         <img title="Javascript"alt="js" src={api}/>
         </section>
         <section>
-        <h4>Mocha</h4>
-        <img title="Javascript"alt="js" src={mocha}/>
+        <h4>Express</h4>
+        <img id="express" title="Javascript"alt="js" src={express}/>
         </section>
       </div>
       <div className="top-skills">
+      <section>
+        <h4>Git</h4>
+        <img title="Javascript"alt="js" src={git}/>
+        </section>
+      <section>
+        <h4>Mocha</h4>
+        <img title="Javascript"alt="js" src={mocha}/>
+        </section>
         <section>
         <h4>Sass</h4>
         <img title="Javascript"alt="js" src={sass}/>
-        </section>
-        <section>
-        <h4>CSS</h4>
-        <img title="Javascript"alt="js" src={css}/>
-        </section>
-        <section>
-        <h4>HTML</h4>
-        <img title="Javascript"alt="js" src={html}/>
         </section>
       </div>
       </a>
