@@ -171,15 +171,6 @@ class App extends Component {
       <br/>
       <br/>
       <h3>Connect</h3>
-      <form className="contactForm">
-      <label for="name">Name &#42;</label>
-      <input name="name" value={this.state.name} onChange={this.handleChange}/>
-      <label for="email">Email &#42;</label>
-      <input name="email" value={this.state.email} onChange={this.handleChange}/>
-      <label for="message">Message &#42;</label>
-      <textarea cols="30" rows="10" name="message" value={this.state.message} onChange={this.handleChange}/>
-      <button disabled={!isEnabled} onClick={this.submitEmail}>Submit</button>
-      </form>
       <div className='connect-buttons'>
       <a href='https://www.linkedin.com/in/rlbutler1/' target="_blank"><img alt='linkedin' height='75'src={linkedin}/></a>
       <a href='mailto:ryan90butler@gmail.com'><img alt='email' height='65' src={email}/></a>

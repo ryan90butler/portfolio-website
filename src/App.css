@@ -144,7 +144,7 @@ h3 {
   align-items:  center;
   align-content:  center;
   margin-top: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   width: 35%;
 }
 
@@ -220,7 +220,6 @@ h3 {
   font-size: 35px;
   padding: 0;
   margin: 0;
-  margin-top: 10px;
 }
 
 button {
@@ -228,34 +227,6 @@ button {
   width: 100px;
   height: 25px;
   margin-bottom: 10px;
-}
-
-.contactForm {
-  display: flex;
-  margin-top: 10px;
-  border: 1px black solid;
-  background: darkgray;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  flex-direction: column;
-  width: 50%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.contactForm textarea {
-  width: 95%;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-.contactForm input {
-  width: 50%;
-}
-
-.contactForm label {
-  margin-top: 10px;
 }
 
 @media only screen and (max-width: 608px) {
@@ -271,9 +242,6 @@ button {
   .connect-buttons {
     width: 75%;
   }
-  .contactForm {
-    width: 80%;
-  }
 }
 
 @media only screen and (max-width: 708px) {
@@ -281,6 +249,9 @@ button {
     width: 100px;
     margin: 0;
     height: auto;
+  }
+  .connect-buttons{
+    width: 45%
   }
   section {
     border-top: 1px black solid;
@@ -297,6 +268,9 @@ button {
     height: auto;
     margin-right: auto;
     margin-left: auto;
+  }
+  .connect-buttons{
+    width: 45%
   }
   .About-container {
     margin-top: 5px;
